@@ -4,11 +4,11 @@ This is the results of me following the tutorial at: https://testdriven.io/
 
 However, I had to make a change and remove a volume from the docker-compose users-service container as it overwrote the /usr/src/app directory that everything was copied into in the Dockerfile.
 
-## Docker Machine Environment
+## Docker Machine Environments
 
 `docker-machine` is used to handle environments for `docker-compose` to push to. 
 
-## Local Environment
+### Local Environment
 
 For local development and testing we will use a virtualbox based host. Use the following commands to set this up.
 
@@ -21,7 +21,7 @@ To get the IP address of the host machine, use `docker-machine ip dev`.
 
 Helpful explanation: https://stackoverflow.com/questions/40038572/eval-docker-machine-env-default/40040077#40040077
 
-## AWS Environemnt
+### AWS Environemnt
 
 For staging, we can push to AWS and run there. Create an AWS CLI user with the following permission profile:
 
