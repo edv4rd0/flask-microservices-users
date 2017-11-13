@@ -13,6 +13,7 @@ class DevelopmentConfig(BaseConfig):
     """Development configuration"""
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+    PRESERVE_CONTEXT_ON_EXCEPTION = False
 
 
 class TestingConfig(BaseConfig):
