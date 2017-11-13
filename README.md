@@ -1,4 +1,4 @@
-# flask-microserves-users
+# flask-microservices-users
 
 This is the results of me following the tutorial at: https://testdriven.io/
 
