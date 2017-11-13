@@ -64,7 +64,7 @@ eval $(docker-machine env aws-sandbox)
 
 To get the IP address of the host machine, use `docker-machine ip aws-sandbox`.
 
-If deploying to a public subnet, you can rmeove `--amazonec2-private-address-only`.
+If deploying to a public subnet, you can remove `--amazonec2-private-address-only`.
 
 Now, when running `docker compose up -d` it will deploy to AWS. Check the EC2 Console and you will see a new EC2 instance running there.
 
