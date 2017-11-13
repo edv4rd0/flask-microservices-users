@@ -160,3 +160,17 @@ class TestUserService(BaseTestCase):
         self.assertIn(b'<strong>michael</strong>', response.data)
         self.assertIn(b'<strong>fletcher</strong>', response.data)
 
+    def test_main_add_user(self):
+        """Ensure a new user can be added to the database."""
+        with self.client:
+            response = self.client.post(
+                '/',
+                data=dict(username='michael', email='michael@realpython.com'),
+                follow_redirects=True
+            )
+            self.assertEqual(response.status_code, 200)
+            self.assertIn(b'<h1>All Users</h1>', response.data)
+            self.assertNotIn(b'<p>No users!</p>', response.data)
+            self.assertIn(b'<strong>michael</strong>', response.data)
+
+

@@ -85,6 +85,8 @@ docker-compose run users-service python manage.py recreate_db
 docker-compose run users-service python manage.py seed_db
 ```
 
+To look at the db directly, access Postgresql this way `docker exec -ti users-db psql -U postgres -W`
+
 ## Testing
 
 
@@ -94,4 +96,20 @@ To run all tests use the following command after running `docker-compose up -d`:
 docker-compose run users-service python manage.py test
 ```
 
+# Helpful Commands
 
+To stop the containers:
+
+`$ docker-compose stop`
+
+To bring down the containers:
+
+`$ docker-compose down`
+
+To force a build:
+
+`$ docker-compose build --no-cache`
+
+To remove images:
+
+`$ docker rmi $(docker images -q)`
