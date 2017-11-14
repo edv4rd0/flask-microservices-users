@@ -95,6 +95,14 @@ To run all tests use the following command after running `docker-compose up -d`:
 ```
 docker-compose run users-service python manage.py test
 ```
+Local environment testing. 
+
+```
+(env)$ python manage.py recreate_db
+(env)$ python manage.py seed_db
+(env)$ python manage.py test
+(env)$ python manage.py cov
+```
 
 # Helpful Commands
 
@@ -113,3 +121,4 @@ To force a build:
 To remove images:
 
 `$ docker rmi $(docker images -q)`
+
